@@ -275,6 +275,34 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-7 offset-md-0 mb-4">
+                        <div><!-- 🎊 Librería Canvas Confetti -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+  window.addEventListener('load', () => {
+    const duration = 5 * 1000; // 5 segundos
+    const end = Date.now() + duration;
+
+    const interval = setInterval(() => {
+      confetti({
+        particleCount: 20,
+        startVelocity: 25,
+        spread: 360,
+        ticks: 60,
+        origin: {
+          x: Math.random(),
+          y: Math.random() * 0.6
+        }
+      });
+
+      if (Date.now() > end) {
+        clearInterval(interval);
+      }
+    }, 200); // una pequeña ráfaga cada 200ms
+  });
+</script></div>
+                    </div>
                 </div>
             </div>
         </div>
